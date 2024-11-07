@@ -1,10 +1,10 @@
-import { IssueStatusBadge } from '@/app/components'
 import { ArrowUpIcon } from '@radix-ui/react-icons'
 import { Table } from '@radix-ui/themes'
 import Link from 'next/link'
 import React from 'react'
 import NextLink from 'next/link';
 import { Issue, Status } from '@prisma/client'
+import { IssueStatusBadge } from '../../components';
 
 export interface IssueQuery {
   status: Status;

@@ -1,8 +1,8 @@
-import authOptions from "@/app/auth/authOptions";
-import { patchIssueSchema } from "@/app/validationSchemas";
-import prisma from "@/prisma/client";
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
+import authOptions from "../../../auth/authOptions";
+import prisma from "../../../../prisma/client";
+import { patchIssueSchema } from "../../../validationSchemas";
 
 export async function PATCH(
   request: NextRequest,
@@ -14,7 +14,7 @@ export async function PATCH(
   const body = await request.json();
   const validation = patchIssueSchema.safeParse(body);
   if (!validation.success)
-    return NextResponse.json(validation.error.format(), {
+    return NextResponse.json("Schema Validation failed", {
       status: 400,
     });
 
