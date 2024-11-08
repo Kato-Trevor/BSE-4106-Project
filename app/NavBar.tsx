@@ -40,7 +40,7 @@ const NavLinks = () => {
   const links = [
     { label: "Dashboard", href: "/" },
     { label: "Issues", href: "/issues/list" },
-    {label: "AI Assistant", href: "/chat"}
+    {label: "AI Chat", href: "/chat"}
   ];
 
   return (
